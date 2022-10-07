@@ -120,7 +120,7 @@ action() {
                 echo "Creating ${ENV_NAME}.tar.gz"
                 mkdir -p "tarballs/conda_envs"
                 conda activate ${ENV_NAME}
-                conda package -n ${ENV_NAME} --output tarballs/conda_envs/${ENV_NAME}.tar.gz
+                conda pack -n ${ENV_NAME} --output tarballs/conda_envs/${ENV_NAME}.tar.gz
                 conda deactivate
             fi
             CVMFS_ENV_PRESENT="False"
